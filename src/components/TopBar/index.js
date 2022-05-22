@@ -3,10 +3,12 @@ import {
   Avatar,
   Box,
   Container,
+  IconButton,
   Tabs,
   Tab,
   makeStyles
 } from "@material-ui/core";
+import Brightness4Icon from "@material-ui/icons/Brightness4";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -17,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
     width: "content-fit"
   },
   root: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor:
+      theme.palette.type === "dark" ? "#1F2122" : theme.palette.common.white,
     top: 0,
     borderBottom: `1px solid ${theme.palette.divider}`,
     left: 0,
@@ -29,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export function TopBar(props) {
+export function TopBar({ toggleDarkMode, ...props }) {
   const classes = useStyles();
 
   return (
@@ -50,6 +53,9 @@ export function TopBar(props) {
           <Tab className={classes.titleCase} label="Today" />
           <Tab className={classes.titleCase} label="Community" />
           <Box flexGrow={1} />
+          <IconButton color="primary" onClick={toggleDarkMode}>
+            <Brightness4Icon />
+          </IconButton>
           <Avatar className={classes.avatar}>CP</Avatar>
         </Tabs>
       </Container>

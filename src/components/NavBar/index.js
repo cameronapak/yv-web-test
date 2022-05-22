@@ -11,6 +11,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor:
+      theme.palette.type === "dark" ? "#1F2122" : theme.palette.common.white,
     bottom: 0,
     borderTop: `1px solid ${theme.palette.divider}`,
     left: 0,

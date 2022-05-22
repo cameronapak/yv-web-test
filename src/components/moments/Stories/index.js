@@ -33,7 +33,7 @@ const Story = ({ id, day, showDot }) => (
           padding={1}
           margin={0}
           color="common.white"
-          bgcolor="action.active"
+          bgcolor="grey.800"
           position="absolute"
           bottom={8}
           left={8}
