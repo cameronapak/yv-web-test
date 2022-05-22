@@ -21,11 +21,11 @@ export default function App() {
     setCurrentPage(value);
   }
 
-  let body = null;
+  let page = null;
   if (currentPage === 0) {
-    body = <Home />;
+    page = <Home />;
   } else {
-    body = <Bible />;
+    page = <Bible />;
   }
 
   return (
@@ -38,7 +38,7 @@ export default function App() {
         paddingBottom={`${50 + 16}px`}
         minHeight="100vh"
       >
-        {body}
+        {page}
         <NavBar currentPage={currentPage} onPageChange={onPageChange} />
       </Paper>
     </ThemeProvider>
