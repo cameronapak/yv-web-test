@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
   card: {
     width: "100%",
     maxWidth: theme.breakpoints.values.sm,
-    borderRadius: 16,
-    padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`
+    borderRadius: 32,
+    padding: `${theme.spacing(2)}px ${theme.spacing(3)}px`
   },
   disabled: {
     opacity: "30%",

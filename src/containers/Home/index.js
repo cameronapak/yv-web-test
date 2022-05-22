@@ -5,7 +5,7 @@ import { Prayer } from "../../components/moments/Prayer";
 import { Stories } from "../../components/moments/Stories";
 import { TopBar } from "../../components/TopBar";
 
-export function Home() {
+export function Home({ toggleDarkMode }) {
   const homeModuleLayout = [VerseOfTheDay, MyPlans, Prayer, Stories];
 
   return (
@@ -16,7 +16,7 @@ export function Home() {
       flexDirection="column"
       gridGap={16}
     >
-      <TopBar />
+      <TopBar toggleDarkMode={toggleDarkMode} />
       {homeModuleLayout.map((Module, index) => {
         return (
           <Grow in={true} timeout={(index + 1) * 500}>
