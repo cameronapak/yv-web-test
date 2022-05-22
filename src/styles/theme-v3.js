@@ -1,7 +1,7 @@
 /**
  * @module v3Theme
  */
-import { createTheme } from "@material-ui/core";
+import { createMuiTheme } from "@material-ui/core";
 import {
   blue,
   border,
@@ -30,7 +30,7 @@ const screenTypes = {
  *
  * import {
  *   ThemeProvider
- *   createTheme,
+ *   createMuiTheme,
  * } from '@material-ui/core'
  * import { getV3ThemeObject } from '@youversion/react'.
  *
@@ -39,7 +39,7 @@ const screenTypes = {
  * // It's important to create the theme outside of any component that could re-render
  * // due to performance hits.
  * // See https://material-ui.com/customization/theming/#a-note-on-performance.
- * const theme = createTheme(getV3ThemeObject({ isDarkMode }))
+ * const theme = createMuiTheme(getV3ThemeObject({ isDarkMode }))
  * function App() {
  *   return (
  *    <ThemeProvider theme={theme}>
@@ -261,7 +261,7 @@ export function createV3Theme(mode = "light") {
     throw new Error(`${mode} mode is not supported.`);
   }
 
-  return createTheme(
+  return createMuiTheme(
     getV3ThemeObject({
       isDarkMode: mode === "dark"
     })
