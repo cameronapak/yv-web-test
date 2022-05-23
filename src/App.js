@@ -9,6 +9,7 @@ import {
 import { NavBar } from "./components/NavBar";
 import { Home } from "./containers/Home";
 import { Bible } from "./containers/Bible";
+import { Plans } from "./containers/Plans";
 import { getV3ThemeObject } from "./styles";
 
 // Hook to toggle dark mode.
@@ -60,8 +61,10 @@ export default function App() {
   let page = null;
   if (currentPage === 0) {
     page = <Home toggleDarkMode={toggleDarkMode} />;
-  } else {
+  } else if (currentPage === 1) {
     page = <Bible />;
+  } else if (currentPage === 2) {
+    page = <Plans />;
   }
 
   return (

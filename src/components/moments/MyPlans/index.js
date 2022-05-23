@@ -3,7 +3,7 @@ import { MomentCard } from "../../MomentCard";
 
 const useStyles = makeStyles((theme) => ({}));
 
-function PlanSquare({ hasBeenRead = false, day = "", id, title = "" }) {
+export function PlanSquare({ hasBeenRead = false, day = "", id, title = "" }) {
   return (
     <Box>
       <Box
